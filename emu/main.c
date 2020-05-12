@@ -4,9 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "byte.h"
 #include "inst.h"
 #include "reg.h"
+#include "types.h"
 
 #define N_INST (4)
 

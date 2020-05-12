@@ -40,10 +40,10 @@
 extern int32_t x[];
 extern uint32_t pc;
 
-extern void set_reg(uint8_t i, int32_t value);
-extern int32_t get_reg(uint8_t i);
+extern inline void set_reg(uint8_t i, int32_t value);
+extern inline int32_t get_reg(uint8_t i);
 
-extern uint32_t incr_pc();
+extern inline uint32_t incr_pc();
 extern void reg_debug();
 
 #endif /* REG_H */

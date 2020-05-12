@@ -8,14 +8,16 @@
 int32_t x[32] = {0};
 uint32_t pc = 0;
 
-void set_reg(uint8_t i, int32_t value) {
+inline void set_reg(uint8_t i, int32_t value) {
   x[i] = value;
   x[0] = 0;
 }
 
-int32_t get_reg(uint8_t i) { return x[i]; }
+inline int32_t get_reg(uint8_t i) { return x[i]; }
 
-uint32_t incr_pc() {
+inline void set_pc(uint32_t value) { pc = value; }
+
+inline uint32_t incr_pc() {
   pc += sizeof(inst32_t);
   return pc;
 }
